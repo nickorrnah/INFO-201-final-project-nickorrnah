@@ -17,6 +17,14 @@ Our 3 data-driven questions that we hope to answer are:
 
 - What is the correlation between hours streamed and hours watched?
 
+Other examples on domain include:
+
+- Views based on most popular game
+
+- Stream time based on region
+
+- Most popular viewing timeframe
+
 ## Finding Data
 
 ### Most Streamed Games on Twitch Dataset
@@ -26,9 +34,13 @@ The data itself was collected by Twitch.  A Twitch user known as "sullygnome" co
  - 100 observations(rows)
  - 11 features(columns)
  
- ### Twitch Stats By Month for the Last Several Years Dataset
+### Twitch Stats By Month for the Last Several Years Dataset
  
 The data itself was collected by Twitch.  A Twitch user known as "sullygnome" compiled the data and hosted it on their website, sullygnome.com.  The data covers several key usage statistics such as watch time and hours streamed. This dataset will be used to answer all of the aforementioned data questions.
 
 - 78 observations(rows)
 - 11 features(columns)
+
+### Hours Watched Daily on twitch
+
+The data is from Twitchtracker.com, a third party data analysis website unaffiliated with Twitch or Amazon. The data factors in current live viewers, weekly average viewers, live channels, and weekly live channels. This dataset can answer all of the previous questions. 
