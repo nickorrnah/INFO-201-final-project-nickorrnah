@@ -43,7 +43,7 @@ The data itself was collected by Twitch.  A Twitch user known as "sullygnome" co
 
 ### Hours Watched Daily on twitch
 
-The data is from Twitchtracker.com, a third party data analysis website unaffiliated with Twitch or Amazon. The data factors in current live viewers, weekly average viewers, live channels, and weekly live channels. This dataset can answer all of the previous questions. 
+The data is from [TwitchTracker](Twitchtracker.com), a third party data analysis website unaffiliated with Twitch or Amazon. The data factors in current live viewers, weekly average viewers, live channels, and weekly live channels. This dataset can answer all of the previous questions. 
 
 - 108 ovservations(rows)
 - 4 features(columns)
