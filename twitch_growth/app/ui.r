@@ -1,49 +1,67 @@
-# UI code
+library(shiny)
+library(shinythemes)
+library(tidyverse)
+library(shinyWidgets)
+library(plotly)
+library(bslib)
+
+
+# UI -------------------------------
 
 ui <- fluidPage(
-  theme = "twitch_quartz",
-  tags$style(type = "text/css",
-             "h1, h2, h3, h4 { text-align: center; }",
-             "p { text-align: center; color: grey; }",
-             "hr { margin-top: 2em; margin-bottom: 2em; }",
-             "#children_madlib { color: white; }"),
   
-  navbarPage("The Rise of Twitch",
-             id = "main",
-             collapsible = T, position = "fixed-top",
+  
+  navbarPage( "The Growth of Twitch",
+  
+    theme = bs_theme(bootswatch = "darkly"),
+    
+    inverse = TRUE,
+    
+    #Home Page Panel
+    tabPanel("Home",
+          
+      fluidRow(width = 12, hr(), hr(),
+        imageOutput("landing",
+          width = "100%",
+          height = "10%"
+        )
+      )     
              
-             # Tab panel: home -----------------
-             tabPanel("Home",
-                      fluidRow(width = 12, hr(), hr(),
-                               imageOutput("landing",
-                                           width = "99%",
-                                           height = "90%",
-                                           click = "landing_cl"))),
+                
+    ),
+    
+    tabPanel("Hours Watched",
              
-             # Tab panel: TODO1
-             tabPanel("TODO 1",
-                      value = "tab1", hr(), hr(),
-                      
-                      
-                      ),
-             
-             # Tab panel: TODO2
-             tabPanel("TODO 2",
-                      value = "tab2",hr(),hr(),
-                      
-                      ),
+      sidebarLayout(
+        sidebarPanel(
+          helpText("Select a timeframe."),
+                 
+            sliderInput("range", 
+                      label = "Range of interest:",
+                      min = 0, max = 100, value = c(0, 100))),
+               
+               mainPanel(plotOutput("map"))
+               
+             )         
              
              
-             # Tab panel: TODO3
-             tabPanel("TODO 3",
-                      value = "tab3", hr(), hr(),
-                      
-                      ),
+    ),
+    
+    tabPanel("Viewership"
              
-             # Tab panel: summary
-             tabPanel("Summary",
-                      value = "sum", hr(), hr(),
-                      
-                      )
+             
+             
+             
+    ),
+    
+    tabPanel("Streamers"
+             
+             
+             
+             
+             
+    )
+    
   )
+  
 )
