@@ -6,8 +6,8 @@ library(shinyWidgets)
 library(plotly)
 library(bslib)
 
-source('twitch_growth/app/double_bar_chart.R')
-source('twitch_growth/app/views_pie_chart.R')
+source('twitch_growth/double_bar_chart.R')
+source('twitch_growth/views_pie_chart.R')
 
 ui <- fluidPage(
   
