@@ -2,7 +2,6 @@ library(plotly)
 library(stringr)
 library(dplyr)
 
-#twitch_df <- read.csv('data/data.csv')
 twitch_df <- read.csv('twitch_growth/data/data.csv')
 
 get_views <- function(yr) {
@@ -34,7 +33,7 @@ build_pie <- function(start_yr, end_yr) {
                        textinfo = 'label+percent',
                        insidetextfont = list(color = '#FFFFFF'),
                        hoverinfo = 'text',
-                       text = ~paste(signif(hours_watched / 1000000000 , 4), ' billion hours'),
+                       text = ~paste(signif(hours_watched / 1000000, 4), 'million average viewers'),
                        marker = list(colors = colors,
                                      line = list(color = '#FFFFFF', width = 1)))
   
