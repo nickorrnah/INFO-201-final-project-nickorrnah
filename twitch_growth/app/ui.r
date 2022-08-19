@@ -57,12 +57,23 @@ ui <- fluidPage(
     
     tabPanel("Streamers"
              
-             
-             
-             
-             
-    )
-    
+      h1("Twitch Channel Affiliation Status"),
+        selectInput(
+          inputId = "year1",
+          label = "Select first year",
+          choices = twitchdf$Year
+        ),
+        selectInput(
+          inputId = "year2",
+          label = "Select second year",
+          choices = twitchdf$Year
+        )
+      )
+      mainPanel(
+        tabsetPanel(
+          tabPanel("Plot", plotOutput(outputId = "1year")),
+          tabPanel("Table", tableOutput(outputId = "2year"))
+        )             
+      )
   )
-  
 )
