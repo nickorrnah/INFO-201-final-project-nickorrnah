@@ -1,13 +1,3 @@
-library(shiny)
-library(shinythemes)
-library(tidyverse)
-library(shinyWidgets)
-library(plotly)
-library(bslib)
-
-
-# UI -------------------------------
-
 ui <- fluidPage(
   
   
@@ -21,36 +11,47 @@ ui <- fluidPage(
     tabPanel("Home",
           
       fluidRow(width = 12, hr(), hr(),
+        
         imageOutput("landing",
+                    
           width = "100%",
           height = "10%"
+          
         )
+        
       )     
              
-                
     ),
     
     tabPanel("Hours Watched",
-             
-      sidebarLayout(
-        sidebarPanel(
-          helpText("Select a timeframe."),
-                 
-            sliderInput("range", 
-                      label = "Range of interest:",
-                      min = 0, max = 100, value = c(0, 100))),
-               
-               mainPanel(plotOutput("map"))
-               
-             )         
-             
+
+      selectInput("bar_selection",
+                  
+        label = "Hour Type",
+        choices = c("Watched Hours" = "watched",
+                    "Streamed Hours" = "stream")
+      ),   
+      
+      mainPanel(plotlyOutput("double_bar_chart"))
              
     ),
     
-    tabPanel("Viewership"
+    tabPanel("Viewership",
              
-             
-             
+      sidebarLayout(
+               
+        sidebarPanel(
+                 
+          sliderInput("range", 
+            label = "Years of interest:",
+            min = 2016, max = 2022, value = c(2018, 2020)
+          )
+                 
+        ),
+               
+        mainPanel(plotlyOutput("view_pie_chart"))
+               
+     ) 
              
     ),
     
