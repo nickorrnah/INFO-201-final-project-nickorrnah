@@ -1,3 +1,4 @@
+
 #Double Bar Chart
 
 library (dplyr)
@@ -5,8 +6,9 @@ library(plotly)
 library(stringr)
 
 twitch_df <- read.csv("twitch_growth/data/data.csv")
+#twitch_df <- read.csv("data/data.csv")
 
-
+# Generating the plot for total hours watched.
 get_hours_watched <- function(yr, type) {
   hours_watched_df <- twitch_df %>% filter(str_detect(twitch_df$Month, yr))
   hours_watched_df <- hours_watched_df$Hours.watched..mins. / 60
@@ -33,8 +35,42 @@ year_growth_back <- c(get_hours_watched("2017", 1),
 
 Year <- c(2017, 2018, 2019, 2020, 2021)
 
-data <- data.frame(years, year_growth_front, year_growth_back)
+data <- data.frame(Year, year_growth_front, year_growth_back)
 
-bar_fig <- plot_ly(data, x = ~Year, y = ~year_growth_front, type = 'bar', name = 'Front Half (January-June)')
-bar_fig <- bar_fig %>% add_trace(y = ~year_growth_back, name = 'Back Half (July-December)')
-bar_fig <- bar_fig %>% layout(yaxis = list(title = 'Hours Watched'), barmode = 'group')
+hrs_watched_bar_fig <- plot_ly(data, x = ~Year, y = ~year_growth_front, type = 'bar', name = 'Front Half (January-June)')
+hrs_watched_bar_fig <- hrs_watched_bar_fig %>% add_trace(y = ~year_growth_back, name = 'Back Half (July-December)')
+hrs_watched_bar_fig <- hrs_watched_bar_fig %>% layout(yaxis = list(title = 'Hours Watched'), barmode = 'group')
+
+
+
+
+# Generating the plot for average viewers.
+get_hrs_streamed <- function(yr, type) {
+  hours_watched_df <- twitch_df %>% filter(str_detect(twitch_df$Month, yr))
+  hours_watched_df <- hours_watched_df$Hours.streamed..mins. / 60
+  
+  if (type == 0) {
+    hours_watched_df <- head(hours_watched_df, 6)
+  } else {
+    hours_watched_df <- tail(hours_watched_df, 6)
+  }
+  return(sum(hours_watched_df))
+}
+
+hrs_streamed_growth_front <- c(get_hrs_streamed("2017", 0),
+                       get_hrs_streamed("2018", 0),
+                       get_hrs_streamed("2019", 0),
+                       get_hrs_streamed("2020", 0),
+                       get_hrs_streamed("2021", 0))
+
+hrs_streamed_growth_back <- c(get_hrs_streamed("2017", 1),
+                      get_hrs_streamed("2018", 1),
+                      get_hrs_streamed("2019", 1),
+                      get_hrs_streamed("2020", 1),
+                      get_hrs_streamed("2021", 1))
+
+data <- data.frame(Year, hrs_streamed_growth_front, hrs_streamed_growth_back)
+
+hrs_streamed_bar_fig <- plot_ly(data, x = ~Year, y = ~year_growth_front, type = 'bar', name = 'Front Half (January-June)')
+hrs_streamed_bar_fig <- hrs_streamed_bar_fig %>% add_trace(y = ~year_growth_back, name = 'Back Half (July-December)')
+hrs_streamed_bar_fig <- hrs_streamed_bar_fig %>% layout(yaxis = list(title = 'Hours Streamed'), barmode = 'group')
