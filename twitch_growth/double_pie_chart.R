@@ -71,7 +71,6 @@ pieunit <- data.frame(Year, Affiliated, Partner, Free_Agent)
 
 group=c("Affiliates", "Active Partners", "Free Agents")
 
-input <- 
 
 
 
