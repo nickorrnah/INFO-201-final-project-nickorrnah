@@ -1,5 +1,15 @@
+library(shiny)
+library(shinydashboard)
+library(shinythemes)
+library(tidyverse)
+library(shinyWidgets)
+library(plotly)
+library(bslib)
+
+source('twitch_growth/app/double_bar_chart.R')
+source('twitch_growth/app/views_pie_chart.R')
+
 ui <- fluidPage(
-  
   
   navbarPage( "The Growth of Twitch",
   
@@ -55,7 +65,7 @@ ui <- fluidPage(
              
     ),
     
-    tabPanel("Streamers"
+    tabPanel("Streamers",
              
       h1("Twitch Channel Affiliation Status"),
         selectInput(
@@ -68,7 +78,7 @@ ui <- fluidPage(
           label = "Select second year",
           choices = twitchdf$Year
         )
-      )
+      ),
       mainPanel(
         tabsetPanel(
           tabPanel("Plot", plotOutput(outputId = "1year")),
