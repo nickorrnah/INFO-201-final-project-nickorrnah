@@ -70,3 +70,14 @@ show that 2022 is a decrease in average views, but when factoring in that this o
 that 2022 stays consistent in its average viewership, this means that 2022 would again be an increase in total average views for Twitch.
 
 Taking all of these factors into account, we determine this to be a sign of sustained growth."
+
+
+
+conclusion_text <- "After analyzing the data, we have gained several key takeaways. 
+
+Firstly, Twitch doubled nearly all of its metrics within the first 6 months of the year 2021. This type of rapid growth was unprecedented for Twitch and was likely influenced by global pandemic.
+
+Secondly, this growth in metrics immediately appeared to be fad-like, as it immediately began to trend back down in the later 6 months of 2020. This time-frame directly overlaps with the time when pandemic-related regulations began to be relaxed. Thus, 
+people were trying to spend more time out-doors and less time inside and on computers.  This would explain the rapid fall of between the front and back halves of 2020, as well as support our final takeaway.
+
+Finally, we believe that Twitch's growth is not a fad and is instead sustainable.  While the growth rate of Twitch has slowed going into both 2021 and 2022, Twitch has still grown.  Across all notable metrics, Twitch has continued to grow year-over-year."
