@@ -71,13 +71,18 @@ that 2022 stays consistent in its average viewership, this means that 2022 would
 
 Taking all of these factors into account, we determine this to be a sign of sustained growth."
 
+twitchaff_text <- "The Channels on Twitch have 3 affliation statuses, the first being Affiliates, who are officaly affiliated with Twitch and gain access to rewards such
+as emotes, channel points and etc. to help build your channel. The second being active partners, who are commited to Twitch and stream exclusively on the platform, which
+is also a higher level than Twitch Affiliates. The third being free agents, who are not affiliated with Twitch and mostly stream for fun without any offical endorsement. 
 
+Using the pie chart, we are able to see the makeup of the Twitch streamer community, and see just how many of them are endorsed by Twitch to stream on their platform.
+It is evident that as time went on, more of the Twitch streamers became affliates, this can be seen in each passing pie chart, as the red portions grow increasingly,
+and both Twitch partners and free agents alike make up for less of the total. This is especially evident in 2022, which in contrast to its previous years, has significantly less
+free agents and partners.
 
-conclusion_text <- "After analyzing the data, we have gained several key takeaways. 
+Another trend spotted is the increasing number of streamers, back in 2016, there were only 103,892 streamers, in contrast, there are currently 592,091 streamers in total. Essientially,
+in the past 6 years, Twitch has seen a 469% increase in streamers and content creators alike. Increase in streamers peaked during Covid, as people were stuck in their homes, bored and 
+starved of entertainment. Not only did more people start streaming, but more people started watching as well, although not reflected by this pie chart. 
 
-Firstly, Twitch doubled nearly all of its metrics within the first 6 months of the year 2021. This type of rapid growth was unprecedented for Twitch and was likely influenced by global pandemic.
-
-Secondly, this growth in metrics immediately appeared to be fad-like, as it immediately began to trend back down in the later 6 months of 2020. This time-frame directly overlaps with the time when pandemic-related regulations began to be relaxed. Thus, 
-people were trying to spend more time out-doors and less time inside and on computers.  This would explain the rapid fall of between the front and back halves of 2020, as well as support our final takeaway.
-
-Finally, we believe that Twitch's growth is not a fad and is instead sustainable.  While the growth rate of Twitch has slowed going into both 2021 and 2022, Twitch has still grown.  Across all notable metrics, Twitch has continued to grow year-over-year."
+Based of current data, there is no evidence that the number of Twitch streamers are slowing down anytime soon, althought it may be difficult to reach the peak statistics
+achieved during the pandemic. "
