@@ -2,7 +2,7 @@ library(plotly)
 library(stringr)
 library(dplyr)
 
-twitch_df <- read.csv('twitch_growth/data/data.csv')
+twitch_df <- read.csv('data/data.csv')
 
 get_views <- function(yr) {
   
@@ -37,7 +37,7 @@ build_pie <- function(start_yr, end_yr) {
                        marker = list(colors = colors,
                                      line = list(color = '#FFFFFF', width = 1)))
   
-  custom_title <- paste0('Share of Viewers by Year from ', start_year_str, ' to ', end_yr_str)
+  custom_title <- paste0('Share of Total Average Views by Year from ', start_year_str, ' to ', end_yr_str)
   
   pie_chart <- pie_chart %>% layout(title = custom_title,
                                     xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
