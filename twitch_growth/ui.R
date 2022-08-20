@@ -84,7 +84,15 @@ ui <- fluidPage(
               ,
   
               tabPanel("Conclusions",
-                       verbatimTextOutput("conclusion")
+                       fluidRow(width = 12, hr(), hr(),
+                                
+                                imageOutput("conclusion_image",
+                                            
+                                            width = "99%",
+                                            height = "80%"
+                                            
+                                ),
+                                verbatimTextOutput("conclusion")
               )
   )
               
