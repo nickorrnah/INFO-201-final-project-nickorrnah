@@ -71,6 +71,17 @@ that 2022 stays consistent in its average viewership, this means that 2022 would
 
 Taking all of these factors into account, we determine this to be a sign of sustained growth."
 
+
+
+conclusion_text <- "After analyzing the data, we have gained several key takeaways. 
+
+Firstly, Twitch doubled nearly all of its metrics within the first 6 months of the year 2021. This type of rapid growth was unprecedented for Twitch and was likely influenced by global pandemic.
+
+Secondly, this growth in metrics immediately appeared to be fad-like, as it immediately began to trend back down in the later 6 months of 2020. This time-frame directly overlaps with the time when pandemic-related regulations began to be relaxed. Thus, 
+people were trying to spend more time out-doors and less time inside and on computers.  This would explain the rapid fall of between the front and back halves of 2020, as well as support our final takeaway.
+
+Finally, we believe that Twitch's growth is not a fad and is instead sustainable.  While the growth rate of Twitch has slowed going into both 2021 and 2022, Twitch has still grown.  Across all notable metrics, Twitch has continued to grow year-over-year."
+
 twitchaff_text <- "The Channels on Twitch have 3 affliation statuses, the first being Affiliates, who are officaly affiliated with Twitch and gain access to rewards such
 as emotes, channel points and etc. to help build your channel. The second being active partners, who are commited to Twitch and stream exclusively on the platform, which
 is also a higher level than Twitch Affiliates. The third being free agents, who are not affiliated with Twitch and mostly stream for fun without any offical endorsement. 
