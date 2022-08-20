@@ -1,8 +1,7 @@
 # Server 
-server <- function(input, output) {
+server <- function(input, output, session) {
   
   output$landing <- renderImage(list(src = "www/landing_image.jpg", width = "100%"), deleteFile = F)
-  output$conclusion_image <- renderImage(list(src = "www/conclusion_image.jpg", width = "100%"), deleteFile = F)
   
   output$view_pie_chart <- renderPlotly({ build_pie(input$range[1], input$range[2]) })
   
@@ -21,7 +20,6 @@ server <- function(input, output) {
   
   output$viewership <- renderText(viewership_text)
   
-  output$conclusion_text <- renderText(conclusion_text)
   
   output$hours <- renderText(if (bar_selection() == "watched") {
     hours_watched_text
@@ -30,4 +28,14 @@ server <- function(input, output) {
     
   })
   
+  output$pie16 <- renderImage(list(src = "www/2016.jpg", width = "100%"), deleteFile = F)
+  output$pie17 <- renderImage(list(src = "www/2017.jpg", width = "100%"), deleteFile = F)
+  output$pie18 <- renderImage(list(src = "www/2018.jpg", width = "100%"), deleteFile = F)
+  output$pie19 <- renderImage(list(src = "www/2019.jpg", width = "100%"), deleteFile = F)
+  output$pie20 <- renderImage(list(src = "www/2020.jpg", width = "100%"), deleteFile = F)
+  output$pie21 <- renderImage(list(src = "www/2021.jpg", width = "100%"), deleteFile = F)
+  output$pie22 <- renderImage(list(src = "www/2022.jpg", width = "100%"), deleteFile = F)
+  output$streamer <- renderText(twitchaff_text)
 }
+
+
