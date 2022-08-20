@@ -4,7 +4,7 @@ library (dplyr)
 library(plotly)
 library(stringr)
 
-twitch_df <- read.csv("twitch_growth/data/data.csv")
+twitch_df <- read.csv("data/data.csv")
 
 # Generating the plot for total hours watched.
 get_hours_watched <- function(yr, type) {
