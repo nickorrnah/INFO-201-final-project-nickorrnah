@@ -20,6 +20,7 @@ server <- function(input, output, session) {
   
   output$viewership <- renderText(viewership_text)
   
+  output$conclusion <- renderText(conclusion_text)
   
   output$hours <- renderText(if (bar_selection() == "watched") {
     hours_watched_text

@@ -1,0 +1,11 @@
+name: twitch_growth
+title:
+username:
+account: nickorrnah
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6814788
+bundleId: 6220121
+url: https://nickorrnah.shinyapps.io/twitch_growth/
+when: 1660974033.42943
+lastSyncTime: 1660974033.42947

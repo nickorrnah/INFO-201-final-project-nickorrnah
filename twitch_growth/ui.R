@@ -79,11 +79,14 @@ ui <- fluidPage(
                        imageOutput("pie19", height = "200px", width = "300px"),
                        imageOutput("pie20", height = "200px", width = "300px"),
                        imageOutput("pie21", height = "200px", width = "300px"),
-                       imageOutput("pie22", height = "200px", width = "300px"),
-                        )
-              ),
+                       imageOutput("pie22", height = "200px", width = "300px"))
+                    
+              ,
   
-              tabPanel("Conclusions")
+              tabPanel("Conclusions",
+                       verbatimTextOutput("conclusion")
+              )
+  )
               
   )
 
