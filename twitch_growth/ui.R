@@ -95,7 +95,7 @@ ui <- fluidPage(
                                 verbatimTextOutput("conclusion")
               )
   )
-              
+  )           
   )
 
 
