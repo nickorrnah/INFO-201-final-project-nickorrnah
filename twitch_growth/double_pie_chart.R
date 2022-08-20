@@ -74,39 +74,40 @@ group=c("Affiliates", "Active Partners", "Free Agents")
 
 
 
-piepercent<- round(100*pie21/sum(pie21), 1)
+
+
 #Input year value under this
-pie(as.numeric(pie16), labels = piepercent, main = "2016 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie21)))
+Pie_2016 <- pie(as.numeric(pie16), labels = round(pie16, digits = 1), main = "2016 Annual Twitch Channel Status ",col = rainbow(length(pie21)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie21)))
 
-piepercent<- round(100*pie21/sum(pie21), 1)
-pie(as.numeric(pie17), labels = piepercent, main = "2017 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie21)))
+
+Pie_2017 <- pie(as.numeric(pie17), labels = round(pie17, digits = 1), main = "2017 Annual Twitch Channel Status ",col = rainbow(length(pie21)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie21)))
 
-piepercent<- round(100*pie21/sum(pie21), 1)
-pie(as.numeric(pie18), labels = piepercent, main = "2018 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie21)))
+
+Pie_2018 <- pie(as.numeric(pie18), labels = round(pie18, digits = 1), main = "2018 Annual Twitch Channel Status ",col = rainbow(length(pie21)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie21)))
 
-piepercent<- round(100*pie21/sum(pie21), 1)
-pie(as.numeric(pie19), labels = piepercent, main = "2019 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie21)))
+
+Pie_2019 <- pie(as.numeric(pie19), labels = round(pie19, digits = 1), main = "2019 Annual Twitch Channel Status ",col = rainbow(length(pie21)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie21)))
 
-piepercent<- round(100*pie21/sum(pie21), 1)
-pie(as.numeric(pie20), labels = piepercent, main = "2020 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie21)))
+
+Pie_2020 <- pie(as.numeric(pie20), labels = round(pie20, digits = 1), main = "2020 Annual Twitch Channel Status ",col = rainbow(length(pie21)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie21)))
 
-piepercent<- round(100*pie21/sum(pie21), 1)
-pie(as.numeric(pie21), labels = piepercent, main = "2021 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie21)))
+
+Pie_2021 <- pie(as.numeric(pie21), labels = round(pie21, digits = 1), main = "2021 Annual Twitch Channel Status ",col = rainbow(length(pie21)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie21)))
 
-piepercent<- round(100*pie22/sum(pie22), 1)
-pie(as.numeric(pie22), labels = piepercent, main = "2022 Annual Twitch Channel Status (In Percent)",col = rainbow(length(pie22)))
+
+Pie_2022 <- pie(as.numeric(pie22), labels = round(pie22, digits = 1), main = "2022 Annual Twitch Channel Status ",col = rainbow(length(pie22)))
 legend("topright", group, cex = 0.8,
        fill = rainbow(length(pie22)))
 
