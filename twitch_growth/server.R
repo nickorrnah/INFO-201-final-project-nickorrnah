@@ -2,6 +2,7 @@
 server <- function(input, output, session) {
   
   output$landing <- renderImage(list(src = "www/landing_image.jpg", width = "100%"), deleteFile = F)
+  output$conclusion_image <- renderImage(list(src = "www/conclusion_image.jpg", width = "100%"), deleteFile = F)
   
   output$view_pie_chart <- renderPlotly({ build_pie(input$range[1], input$range[2]) })
   
