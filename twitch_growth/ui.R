@@ -71,7 +71,7 @@ ui <- fluidPage(
                        
               ),
               
-              tabPanel("Streamers"
+              tabPanel("Streamers",
                        
                        h1("Twitch Channel Affiliation Status"),
                        selectInput(
