@@ -10,6 +10,8 @@ source('double_bar_chart.R')
 source('views_pie_chart.R')
 source('text.R')
 
+twitchdf <- read.csv("data/twitch.csv")
+
 ui <- fluidPage(
   
   navbarPage( "The Growth of Twitch",
@@ -71,24 +73,24 @@ ui <- fluidPage(
               
               tabPanel("Streamers"
                        
-                       #h1("Twitch Channel Affiliation Status"),
-                       #selectInput(
-                         #inputId = "year1",
-                         #label = "Select first year",
-                         #choices = twitchdf$Year
-                       #),
-                       #selectInput(
-                         #inputId = "year2",
-                         #label = "Select second year",
-                         #choices = twitchdf$Year
-                       #),
+                       h1("Twitch Channel Affiliation Status"),
+                       selectInput(
+                         inputId = "year1",
+                         label = "Select first year",
+                         choices = twitchdf$Year
+                       ),
+                       selectInput(
+                         inputId = "year2",
+                         label = "Select second year",
+                         choices = twitchdf$Year
+                       ),
               
-              #mainPanel(
-                #tabsetPanel(
-                  #tabPanel("Plot", plotOutput(outputId = "1year")),
-                  #tabPanel("Table", tableOutput(outputId = "2year"))
-                #) 
-              #)
+              mainPanel(
+                tabsetPanel(
+                  tabPanel("Plot", plotOutput(outputId = "1year")),
+                  tabPanel("Table", tableOutput(outputId = "2year"))
+                ) 
+              )
                        
               ),
   
