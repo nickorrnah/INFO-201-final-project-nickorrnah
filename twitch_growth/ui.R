@@ -27,8 +27,8 @@ ui <- fluidPage(
                                 
                                 imageOutput("landing",
                                             
-                                            width = "99%",
-                                            height = "10%"
+                                            width = "100%",
+                                            height = "100%"
                                             
                                 ),
                                 verbatimTextOutput("intro")
@@ -65,7 +65,7 @@ ui <- fluidPage(
                          ),
                          
                          mainPanel(plotlyOutput("view_pie_chart"),
-                         verbatimTextOutput("viewership")
+                                   verbatimTextOutput("viewership")
                          )
                        ) 
                        
@@ -84,18 +84,29 @@ ui <- fluidPage(
                          label = "Select second year",
                          choices = twitchdf$Year
                        ),
-              
-              mainPanel(
-                tabsetPanel(
-                  tabPanel("Plot", plotOutput(outputId = "1year")),
-                  tabPanel("Table", tableOutput(outputId = "2year"))
-                ) 
-              )
+                       
+                       mainPanel(
+                         tabsetPanel(
+                           tabPanel("Plot", plotOutput(outputId = "1year")),
+                           tabPanel("Table", tableOutput(outputId = "2year"))
+                         ) 
+                       )
                        
               ),
-  
               
-              tabPanel("Conclusions")
+              
+              tabPanel("Conclusions",
+                       fluidRow(width = 12, hr(), hr(),
+                                
+                                imageOutput("conclusion_image",
+                                            
+                                            width = "1000%",
+                                            height = "80%"
+                                            
+                                ),
+                                verbatimTextOutput("conclusion_text")
+                                
+                       ) )
               
   )
 )
