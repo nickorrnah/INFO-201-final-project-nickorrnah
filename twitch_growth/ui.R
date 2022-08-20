@@ -27,8 +27,8 @@ ui <- fluidPage(
                                 
                                 imageOutput("landing",
                                             
-                                            width = "100%",
-                                            height = "100%"
+                                            width = "99%",
+                                            height = "10%"
                                             
                                 ),
                                 verbatimTextOutput("intro")
@@ -65,48 +65,26 @@ ui <- fluidPage(
                          ),
                          
                          mainPanel(plotlyOutput("view_pie_chart"),
-                                   verbatimTextOutput("viewership")
+                         verbatimTextOutput("viewership")
                          )
                        ) 
                        
               ),
-              
-              tabPanel("Streamers",
-                       
-                       h1("Twitch Channel Affiliation Status"),
-                       selectInput(
-                         inputId = "year1",
-                         label = "Select first year",
-                         choices = twitchdf$Year
-                       ),
-                       selectInput(
-                         inputId = "year2",
-                         label = "Select second year",
-                         choices = twitchdf$Year
-                       ),
-                       
-                       mainPanel(
-                         tabsetPanel(
-                           tabPanel("Plot", plotOutput(outputId = "1year")),
-                           tabPanel("Table", tableOutput(outputId = "2year"))
-                         ) 
-                       )
-                       
+           
+              tabPanel("Streamers", 
+                       verbatimTextOutput("streamer"), 
+                       imageOutput("pie16", height = "200px", width = "300px"),
+                       imageOutput("pie17", height = "200px", width = "300px"),
+                       imageOutput("pie18", height = "200px", width = "300px"),
+                       imageOutput("pie19", height = "200px", width = "300px"),
+                       imageOutput("pie20", height = "200px", width = "300px"),
+                       imageOutput("pie21", height = "200px", width = "300px"),
+                       imageOutput("pie22", height = "200px", width = "300px"),
+                        )
               ),
-              
-              
-              tabPanel("Conclusions",
-                       fluidRow(width = 12, hr(), hr(),
-                                
-                                imageOutput("conclusion_image",
-                                            
-                                            width = "1000%",
-                                            height = "80%"
-                                            
-                                ),
-                                verbatimTextOutput("conclusion_text")
-                                
-                       ) )
+  
+              tabPanel("Conclusions")
               
   )
-)
+
+
